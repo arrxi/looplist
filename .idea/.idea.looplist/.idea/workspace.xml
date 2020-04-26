@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="86569e14-5077-4599-9df4-42339e4fd0ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/LoopList/Scripts/HorizontalGirdScrollView.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/LoopList/Scripts/HorizontalGirdScrollView/HGLayout.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LoopList/VerticalScrollView.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LoopList/VerticalScrollView/ItemMark.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LoopList/VerticalScrollView/ItemMark.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LoopList/VerticalScrollView/MEVerticalLayout.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LoopList/VerticalScrollView/MEVerticalLayout.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LoopList/VerticalScrollView/waitS.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LoopList/VerticalScrollView/waitS.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LoopList/demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LoopList/demo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/MEVerticalLayout.cs">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="391">
+                    <caret line="184" column="40" selection-start-line="184" selection-start-column="40" selection-end-line="184" selection-end-column="40" />
+                    <folding>
+                      <marker date="1587906932550" expanded="false" signature="6:100" ph="..." />
+                      <marker date="1587906932550" expanded="true" signature="151:251" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="215:249" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="298:6032" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="808:978" ph="Padding" />
+                      <marker date="1587906932550" expanded="true" signature="1057:1652" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="1658:1708" ph="/// 创建虚拟的数据模型 ... " />
+                      <marker date="1587906932550" expanded="true" signature="1736:1851" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="1779:1845" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="1857:1912" ph="/// 计算用于显示的item的数量 ... " />
+                      <marker date="1587906932550" expanded="true" signature="1942:2054" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2090:2335" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2365:3170" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2438:2546" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2583:2829" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2640:2819" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2733:2805" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2842:3090" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2901:3080" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="2994:3066" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="3210:4220" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="3275:3369" ph="{...}" />
+                      <marker date="1587906932550" expanded="false" signature="3423:4192" ph="生成物体并设置位置" />
+                      <marker date="1587906932550" expanded="true" signature="4266:4934" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="4569:4674" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="4791:4894" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="4974:5451" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="5014:5054" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="5491:5952" ph="{...}" />
+                      <marker date="1587906932550" expanded="true" signature="6018:6030" ph="{...}" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/HorizontalGirdScrollView/HGLayout.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+              <folding>
+                <marker date="1587912148404" expanded="true" signature="6:101" ph="..." />
+                <marker date="1587912148404" expanded="true" signature="153:3939" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="206:348" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="388:3937" ph="{...}" />
+                <marker date="1587912148404" expanded="false" signature="425:500" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="575:729" ph="Item预制体相关" />
+                <marker date="1587912148404" expanded="true" signature="1141:1197" ph="/// 行数   列数 ... " />
+                <marker date="1587912148404" expanded="true" signature="1297:2058" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="2088:2601" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="2272:2348" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="2654:2965" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="2690:2955" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="3017:3695" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="3704:3759" ph="/// 添加模拟数据 ... " />
+                <marker date="1587912148404" expanded="true" signature="3783:3931" ph="{...}" />
+                <marker date="1587912148404" expanded="true" signature="3835:3921" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/ItemMark.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-48">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <marker date="1587905048110" expanded="false" signature="6:100" ph="..." />
+                <marker date="1587905048110" expanded="true" signature="139:729" ph="{...}" />
+                <marker date="1587905048110" expanded="true" signature="363:450" ph="{...}" />
+                <marker date="1587905048110" expanded="true" signature="529:649" ph="{...}" />
+                <marker date="1587905048110" expanded="true" signature="715:727" ph="{...}" />
+                <marker date="1587905048110" expanded="true" signature="765:909" ph="{...}" />
+                <marker date="1587905048110" expanded="true" signature="828:907" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/waitS.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+              <folding>
+                <marker date="1587905048127" expanded="false" signature="6:78" ph="..." />
+                <marker date="1587905048127" expanded="true" signature="115:473" ph="{...}" />
+                <marker date="1587905048127" expanded="true" signature="226:271" ph="{...}" />
+                <marker date="1587905048127" expanded="true" signature="304:393" ph="{...}" />
+                <marker date="1587905048127" expanded="true" signature="459:471" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/HorizontalGirdScrollView/HGLayout.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/ItemMark.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/MEVerticalLayout.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/waitS.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/LoopList/Scripts/HorizontalGirdScrollView/HorizontalGrid.cs" />
+        <option value="$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/MEVerticalLayout.cs" />
+        <option value="$PROJECT_DIR$/Assets/LoopList/Scripts/HorizontalGirdScrollView/HGLayout.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.idea.looplist/.idea/indexLayout.xml" />
+        <option value="$PROJECT_DIR$/.idea/.idea.looplist/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="UnityExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="LoopList" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="LoopList" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="LoopList" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="HorizontalGirdScrollView" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="8711f2a6:AssetsRoot" />
+              <item name="LoopList" type="1045f7f1:UnityExplorerNode" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="VerticalScrollView" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="e068e287:UnityExplorerRootNode" />
+              <item name="Packages" type="4e2708dd:PackagesRoot" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="86569e14-5077-4599-9df4-42339e4fd0ff" name="Default Changelist" comment="" />
+      <created>1587905441929</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587905441929</updated>
+      <workItem from="1587905454700" duration="6802000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6802000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21991247" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Performance Profiler" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/MEVerticalLayout.cs</url>
+          <line>12</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/MEVerticalLayout.cs" initialLine="11">
+            <startOffsets>
+              <option value="220" />
+            </startOffsets>
+            <endOffsets>
+              <option value="221" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/ItemMark.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <marker date="1587905048110" expanded="false" signature="6:100" ph="..." />
+            <marker date="1587905048110" expanded="true" signature="139:729" ph="{...}" />
+            <marker date="1587905048110" expanded="true" signature="363:450" ph="{...}" />
+            <marker date="1587905048110" expanded="true" signature="529:649" ph="{...}" />
+            <marker date="1587905048110" expanded="true" signature="715:727" ph="{...}" />
+            <marker date="1587905048110" expanded="true" signature="765:909" ph="{...}" />
+            <marker date="1587905048110" expanded="true" signature="828:907" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/waitS.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <marker date="1587905048127" expanded="false" signature="6:78" ph="..." />
+            <marker date="1587905048127" expanded="true" signature="115:473" ph="{...}" />
+            <marker date="1587905048127" expanded="true" signature="226:271" ph="{...}" />
+            <marker date="1587905048127" expanded="true" signature="304:393" ph="{...}" />
+            <marker date="1587905048127" expanded="true" signature="459:471" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/VerticalScrollView/MEVerticalLayout.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="184" column="40" selection-start-line="184" selection-start-column="40" selection-end-line="184" selection-end-column="40" />
+          <folding>
+            <marker date="1587906932550" expanded="false" signature="6:100" ph="..." />
+            <marker date="1587906932550" expanded="true" signature="151:251" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="215:249" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="298:6032" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="808:978" ph="Padding" />
+            <marker date="1587906932550" expanded="true" signature="1057:1652" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="1658:1708" ph="/// 创建虚拟的数据模型 ... " />
+            <marker date="1587906932550" expanded="true" signature="1736:1851" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="1779:1845" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="1857:1912" ph="/// 计算用于显示的item的数量 ... " />
+            <marker date="1587906932550" expanded="true" signature="1942:2054" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2090:2335" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2365:3170" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2438:2546" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2583:2829" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2640:2819" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2733:2805" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2842:3090" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2901:3080" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="2994:3066" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="3210:4220" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="3275:3369" ph="{...}" />
+            <marker date="1587906932550" expanded="false" signature="3423:4192" ph="生成物体并设置位置" />
+            <marker date="1587906932550" expanded="true" signature="4266:4934" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="4569:4674" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="4791:4894" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="4974:5451" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="5014:5054" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="5491:5952" ph="{...}" />
+            <marker date="1587906932550" expanded="true" signature="6018:6030" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/LoopList/Scripts/HorizontalGirdScrollView/HGLayout.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+          <folding>
+            <marker date="1587912148404" expanded="true" signature="6:101" ph="..." />
+            <marker date="1587912148404" expanded="true" signature="153:3939" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="206:348" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="388:3937" ph="{...}" />
+            <marker date="1587912148404" expanded="false" signature="425:500" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="575:729" ph="Item预制体相关" />
+            <marker date="1587912148404" expanded="true" signature="1141:1197" ph="/// 行数   列数 ... " />
+            <marker date="1587912148404" expanded="true" signature="1297:2058" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="2088:2601" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="2272:2348" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="2654:2965" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="2690:2955" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="3017:3695" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="3704:3759" ph="/// 添加模拟数据 ... " />
+            <marker date="1587912148404" expanded="true" signature="3783:3931" ph="{...}" />
+            <marker date="1587912148404" expanded="true" signature="3835:3921" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
