@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemMark : MonoBehaviour
-{
+public class ItemMark : MonoBehaviour {
     public int index = -1;
     private ScrollItemData data;
     public RectTransform _rect;
@@ -16,28 +15,17 @@ public class ItemMark : MonoBehaviour
     {
         title.text = data.id.ToString();
         index = data.id;
-        
     }
 
     // Start is called before the first frame update
     private void Awake()
     {
         _rect = GetComponent<RectTransform>();
-        title = transform.Find("Text").GetComponent<Text>();
+        title = transform.GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-    }
-}
-
-public static class Extension_List
-{
-    public static T Pop<T>(this List<T> list, int index = 0)
-    {
-        T t = list[0];
-        list.RemoveAt(0);
-        return t;
     }
 }
