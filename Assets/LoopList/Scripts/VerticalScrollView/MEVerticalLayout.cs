@@ -3,18 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class ScrollItemData
-{
-    ///
-    public int id;
-
-    public ScrollItemData(int id)
-    {
-        this.id = id;
-    }
-}
-
+[System.Obsolete]
 public class MEVerticalLayout : MonoBehaviour
 {
     public ScrollRect _scroll;

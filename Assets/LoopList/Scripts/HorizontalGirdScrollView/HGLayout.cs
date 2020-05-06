@@ -14,7 +14,7 @@ namespace ScrollR {
         /// </summary>
         protected int rows, cols;
 
-        private void Awake()
+        public override void Awake()
         {
             RectTransform prefabRect = ItemPrefab.GetComponent<RectTransform>();
             if (prefabRect == null)
@@ -26,14 +26,14 @@ namespace ScrollR {
             _scrollRect = _scroll.transform as RectTransform;
             rows = Mathf.CeilToInt(_scrollRect.rect.width / prefabWidth);
             cols = Mathf.FloorToInt(_scrollRect.rect.height / prefabHeight);
+            Debug.LogWarning($"行数(rows)：{rows}    列数(cols)：{cols}");
             //添加模拟数据
             if (virtualModel) GetModel();
         }
 
-        private void Start()
+        public override void Start()
         {
             int num = rows * cols > _itemDataList.Count ? _itemDataList.Count : rows * cols;
-            Debug.Log($"数量num:{num}");
             for (int i = 0; i < num; i++)
             {
                 CreateItem(_itemDataList[i], i);
@@ -41,16 +41,16 @@ namespace ScrollR {
             _content.sizeDelta = Vector2.right * (padding.left + padding.right + prefabWidth * rows + (rows - 1) * padding.spacing);
             _startIndex = 0;
             _endIndex = num - 1;
+            Debug.LogWarning($"_startIndex:{_startIndex}\t_endIndex:{_endIndex}");
             _scroll.onValueChanged.AddListener(ValueChangedCall);
         }
 
-        private void ValueChangedCall(Vector2 arg0)
+        public override void ValueChangedCall(Vector2 arg0)
         {
             if (_scroll.horizontalScrollbar.value > 1)
             {
                 for (int i = 0; i < cols; i++)
                 {
-                    Start2End();
                     Start2End();
                 }
             }
@@ -70,16 +70,19 @@ namespace ScrollR {
         /// <summary>
         /// 把前端的Item移动到末端
         /// </summary>
-        public void Start2End()
+        public override void Start2End()
         {
             if (_endIndex >= _itemDataList.Count - 1)
             {
                 return;
             }
-            ItemMask_HG mark = items.Pop();
+            _startIndex++;
+            _endIndex++;
+            ItemMark_HG mark = items.Pop();
             float x = 0;
             float y = 0;
-            if (_endIndex % 2 != 0)
+            int c = _endIndex%cols;
+            if (c ==0)//刚好是整数倍
             {
                 x = items.lastData()._rect.anchoredPosition.x + prefabWidth + padding.spacing;
                 y = -padding.top;
@@ -87,37 +90,39 @@ namespace ScrollR {
             }
             else
             {
+
                 x = items.lastData()._rect.anchoredPosition.x;
-                y = -(padding.top + padding.spacing + prefabHeight);
+                y = -(padding.top + padding.spacing*c + prefabHeight*c);
             }
             mark._rect.anchoredPosition3D = new Vector3(x, y, 0);
-            mark.Data = _itemDataList[_endIndex + 1];
+            mark.Data = _itemDataList[_endIndex];
             items.Add(mark);
-            _startIndex++;
-            _endIndex++;
+   
         }
 
         /// <summary>
         /// 把末端的Item移动到前面
         /// </summary>
-        public void End2Start()
+        public override void End2Start()
         {
             if (_startIndex <= 0)
             {
                 return;
             }
-            ItemMask_HG mask = items.PopLast();
+
+            ItemMark_HG mask = items.PopLast();
             float x = 0, y = 0;
-            if (_startIndex % 2 != 0)
+            int c = _startIndex%cols;
+            if (c !=0)
             {
                 x = items[0]._rect.anchoredPosition.x;
-                y = -padding.top;
+                y = -(padding.top+(padding.spacing+prefabHeight)*(c-1));
             }
-            else
+            else//如果需要换列
             {
                 _content.sizeDelta -= Vector2.right * (prefabWidth + padding.spacing);
                 x = items[0]._rect.anchoredPosition.x - prefabWidth - padding.spacing;
-                y = -(padding.top + padding.spacing + prefabHeight);
+                y = -(padding.top + (padding.spacing+prefabHeight)*(cols-1)  );
             }
             mask._rect.anchoredPosition3D = new Vector3(x, y, 0);
             mask.Data = _itemDataList[_startIndex - 1];
@@ -131,17 +136,16 @@ namespace ScrollR {
         /// </summary>
         /// <param name="data"></param>
         /// <param name="i"></param>
-        private void CreateItem(ScrollItemData data, int i)
+        public override void CreateItem(ScrollItemData data, int i)
         {
             int x = i / cols;
             int y = i % cols;
-            Debug.Log($"创建第{i}个对象坐标是:({x},{y})");
             var item = Instantiate(ItemPrefab);
 
-            var mask = item.GetComponent<ItemMask_HG>();
+            var mask = item.GetComponent<ItemMark_HG>();
             if (mask == null)
             {
-                mask = item.AddComponent<ItemMask_HG>();
+                mask = item.AddComponent<ItemMark_HG>();
             }
             mask.Data = data;
             item.transform.SetParent(_content);
@@ -152,15 +156,6 @@ namespace ScrollR {
             items.Add(mask);
         }
 
-        /// <summary>
-        /// 添加模拟数据
-        /// </summary>
-        private void GetModel()
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                _itemDataList.Add(new ScrollItemData(i));
-            }
-        }
+
     }
 }
