@@ -6,8 +6,8 @@ using UnityEngine;
 
 namespace ScrollR {
 
-    public class HGLayout : Layout {
-        protected int _startIndex, _endIndex;
+    public abstract class HGLayout : Layout {
+
 
         /// <summary>
         /// 行数   列数
@@ -16,19 +16,10 @@ namespace ScrollR {
 
         public override void Awake()
         {
-            RectTransform prefabRect = ItemPrefab.GetComponent<RectTransform>();
-            if (prefabRect == null)
-                Debug.LogError("ItemPrefab不包含RectTransform组件，请确保ItemPrefab是一个UI的预制体");
-
-            prefabWidth = prefabRect.rect.width;
-            prefabHeight = prefabRect.rect.height;
-            _content = transform as RectTransform;
-            _scrollRect = _scroll.transform as RectTransform;
+            base.Awake();
             rows = Mathf.CeilToInt(_scrollRect.rect.width / prefabWidth);
             cols = Mathf.FloorToInt(_scrollRect.rect.height / prefabHeight);
             Debug.LogWarning($"行数(rows)：{rows}    列数(cols)：{cols}");
-            //添加模拟数据
-            if (virtualModel) GetModel();
         }
 
         public override void Start()
@@ -134,12 +125,12 @@ namespace ScrollR {
         /// <summary>
         /// clone一个Item
         /// </summary>
-        /// <param name="data"></param>
-        /// <param name="i"></param>
-        public override void CreateItem(ScrollItemData data, int i)
+        /// <param name="data">传入的数据</param>
+        /// <param name="index">传入数据的索引</param>
+        public override void CreateItem(ScrollItemData data, int index)
         {
-            int x = i / cols;
-            int y = i % cols;
+            int x = index / cols;
+            int y = index % cols;
             var item = Instantiate(ItemPrefab);
 
             var mask = item.GetComponent<ItemMark_HG>();
@@ -147,6 +138,7 @@ namespace ScrollR {
             {
                 mask = item.AddComponent<ItemMark_HG>();
             }
+            mask.initItemCall = inititemCall;//.AddSingleListener(inititemCall);
             mask.Data = data;
             item.transform.SetParent(_content);
             (item.transform as RectTransform).anchoredPosition3D = new Vector3(padding.left + prefabWidth * x + padding.spacing * x,

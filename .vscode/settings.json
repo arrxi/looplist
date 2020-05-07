@@ -51,6 +51,11 @@
         "Obj/":true,
         "ProjectSettings/":true,
         "temp/":true,
-        "Temp/":true
+        "Temp/":true,
+        //自定义custom
+        "Packages/":true,
+        ".*/":true,
+        "**/*.md":true
+
     }
 }

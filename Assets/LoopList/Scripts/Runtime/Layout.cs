@@ -5,11 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Events;
 namespace ScrollR {
 
     public class Layout : UnityEngine.MonoBehaviour {
 
+        // public UnityAction<RectTransform,ScrollItemData> inititemCall;
+        [Header("用于初始化Item组件的事件：")]
+        public InitItemCall inititemCall=new InitItemCall();
         [System.Serializable]
         public class Padding {
             public int top;
@@ -19,10 +22,7 @@ namespace ScrollR {
             public int spacing;
         }
 
-        public enum LayoutType {
-            FirstVertical,
-            FirstHorizontal,
-        }
+        protected int _startIndex, _endIndex;
 
         /// <summary>
         /// 是否添加模拟数据
@@ -72,21 +72,30 @@ namespace ScrollR {
         [Header("----------布局----------")]
         public Padding padding;
 
-        [Header("先择是行优先还是列优先 暂时无用 TODO")]
-        public LayoutType type;
-
         /// <summary>
         /// Item的索引
         /// </summary>
         protected List<ItemMark_HG> items = new List<ItemMark_HG>();
 
 
-        public virtual void Awake(){}
+        public virtual void Awake(){
+
+            RectTransform prefabRect = ItemPrefab.GetComponent<RectTransform>();
+            if (prefabRect == null)
+                Debug.LogError("ItemPrefab不包含RectTransform组件，请确保ItemPrefab是一个UI的预制体");
+
+            prefabWidth = prefabRect.rect.width;
+            prefabHeight = prefabRect.rect.height;
+            _content = transform as RectTransform;
+            _scrollRect = _scroll.transform as RectTransform;
+            //添加模拟数据
+            if (virtualModel) GetModel();
+        }
         public virtual void Start(){}
         public virtual void ValueChangedCall(Vector2 arg0){}
         public virtual void Start2End(){}
         public virtual void End2Start(){}
-        public virtual void CreateItem(ScrollItemData data,int i){
+        public virtual void CreateItem(ScrollItemData data,int index){
         }
         /// <summary>
         /// 添加模拟数据
