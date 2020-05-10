@@ -2,31 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using ScrollR;
 
-[System.Obsolete]
-public class ItemMark : MonoBehaviour {
-    public int index = -1;
-    private ScrollItemData data;
-    public RectTransform _rect;
-    private Text title;
-
-    public ScrollItemData Data { get => data; set { data = value; _init(); } }
-
-    private void _init()
+namespace ScrollR
+{
+    [System.Obsolete]
+    public class ItemMark : MonoBehaviour
     {
-        title.text = data.id.ToString();
-        index = data.id;
-    }
+        public int index = -1;
+        private ScrollItemData data;
+        public RectTransform _rect;
+        private Text title;
 
-    // Start is called before the first frame update
-    private void Awake()
-    {
-        _rect = GetComponent<RectTransform>();
-        title = transform.GetComponentInChildren<Text>();
-    }
+        public ScrollItemData Data { get => data; set { data = value; _init(); } }
 
-    // Update is called once per frame
-    private void Update()
-    {
+        private void _init()
+        {
+            title.text = data.id.ToString();
+            index = data.id;
+        }
+
+        // Start is called before the first frame update
+        private void Awake()
+        {
+            _rect = GetComponent<RectTransform>();
+            title = transform.GetComponentInChildren<Text>();
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+        }
     }
 }

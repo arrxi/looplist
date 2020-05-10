@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-namespace ScrollR {
 
-    public class Layout : UnityEngine.MonoBehaviour {
-
+namespace ScrollR
+{
+    public abstract class Layout : MonoBehaviour
+    {
         // public UnityAction<RectTransform,ScrollItemData> inititemCall;
         [Header("用于初始化Item组件的事件：")]
-        public InitItemCall inititemCall=new InitItemCall();
+        public InitItemCall inititemCall = new InitItemCall();
+
         [System.Serializable]
-        public class Padding {
+        public class Padding
+        {
             public int top;
             public int left;
             public int right;
@@ -77,9 +80,11 @@ namespace ScrollR {
         /// </summary>
         protected List<ItemMark_HG> items = new List<ItemMark_HG>();
 
+        protected bool isInit;
 
-        public virtual void Awake(){
-
+        public virtual void Awake()
+        {
+            isInit = false;
             RectTransform prefabRect = ItemPrefab.GetComponent<RectTransform>();
             if (prefabRect == null)
                 Debug.LogError("ItemPrefab不包含RectTransform组件，请确保ItemPrefab是一个UI的预制体");
@@ -91,12 +96,27 @@ namespace ScrollR {
             //添加模拟数据
             if (virtualModel) GetModel();
         }
-        public virtual void Start(){}
-        public virtual void ValueChangedCall(Vector2 arg0){}
-        public virtual void Start2End(){}
-        public virtual void End2Start(){}
-        public virtual void CreateItem(ScrollItemData data,int index){
+
+        public virtual void Start()
+        {
         }
+
+        public virtual void ValueChangedCall(Vector2 arg0)
+        {
+        }
+
+        public virtual void Start2End()
+        {
+        }
+
+        public virtual void End2Start()
+        {
+        }
+
+        public virtual void CreateItem(ScrollItemData data, int index)
+        {
+        }
+
         /// <summary>
         /// 添加模拟数据
         /// </summary>
@@ -107,25 +127,29 @@ namespace ScrollR {
                 _itemDataList.Add(new ScrollItemData(i));
             }
         }
+
         /// <summary>
         /// 添加元素到末尾
         /// </summary>
         /// <param name="data"></param>
-        public virtual void AddData(ScrollItemData data){
+        public virtual void AddData(ScrollItemData data)
+        {
             _itemDataList.Add(data);
         }
+
         /// <summary>
         /// 插入一个数据 如果索引为负，则添加到列表末尾
         /// </summary>
         /// <param name="data"></param>
         /// <param name="index"></param>
-        public virtual void AddDataAt(ScrollItemData data,int index=-1){
-            if (index>=_itemDataList.Count)
+        public virtual void AddDataAt(ScrollItemData data, int index = -1)
+        {
+            if (index >= _itemDataList.Count)
             {
                 Debug.LogError("索引超出范围");
                 return;
             }
-            _itemDataList.Insert(index<0?_itemDataList.Count-1:index,data);
+            _itemDataList.Insert(index < 0 ? _itemDataList.Count - 1 : index, data);
         }
     }
 }

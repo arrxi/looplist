@@ -4,11 +4,10 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
 
-namespace ScrollR {
-
-    public abstract class HGLayout : Layout {
-
-
+namespace ScrollR
+{
+    public abstract class HGLayout : Layout
+    {
         /// <summary>
         /// 行数   列数
         /// </summary>
@@ -24,33 +23,60 @@ namespace ScrollR {
 
         public override void Start()
         {
-            int num = rows * cols > _itemDataList.Count ? _itemDataList.Count : rows * cols;
+            base.Start();
+            Initialize();
+        }
+
+        /// <summary>
+        /// 该方法在Start中调用
+        /// </summary>
+        public void Initialize()
+        {
+            //计算需要的item数量（这里多加了一列 ，是为了解决反向滑动的时候，右下角的item没有滑动出去的时候，就移动到前面的bug）
+            //
+            int num = ((rows * cols) > _itemDataList.Count ? _itemDataList.Count : (rows * cols) + cols);
+            //生成item
             for (int i = 0; i < num; i++)
             {
                 CreateItem(_itemDataList[i], i);
             }
-            _content.sizeDelta = Vector2.right * (padding.left + padding.right + prefabWidth * rows + (rows - 1) * padding.spacing);
+            //初始化Content的尺寸
+            int cw = Mathf.CeilToInt(num / cols);
+            _content.sizeDelta = Vector2.right * (padding.left + padding.right + prefabWidth * cw + (cw - 1) * padding.spacing);
+            //初始化数据的索引
             _startIndex = 0;
             _endIndex = num - 1;
             Debug.LogWarning($"_startIndex:{_startIndex}\t_endIndex:{_endIndex}");
+            //添加滑动检测的事件
             _scroll.onValueChanged.AddListener(ValueChangedCall);
         }
 
         public override void ValueChangedCall(Vector2 arg0)
         {
+            //当滑动到底部的时候
             if (_scroll.horizontalScrollbar.value > 1)
             {
-                for (int i = 0; i < cols; i++)
+                int tmp = _endIndex % cols;
+                for (int i = 0; i < (tmp == cols - 1 ? cols : cols - 1 - tmp); i++)
                 {
                     Start2End();
                 }
             }
+            //当滑动的顶部的时候
             else
             {
-                float lastItemPos = _content.anchoredPosition3D.x + items[0]._rect.anchoredPosition3D.x;
+                //最顶部的Item所在的列
+                int tmp = _startIndex % cols;
+                //（逻辑上的）第一个item相对于根节点的x坐标
+                float lastItemPos;
+                if (tmp == 0)
+                    lastItemPos = _content.anchoredPosition3D.x + items[0]._rect.anchoredPosition3D.x;
+                else
+                    lastItemPos = _content.anchoredPosition3D.x + items[cols]._rect.anchoredPosition3D.x;
+                //当最前面的item的相对坐标大于0，说明滑动到顶端了
                 if (lastItemPos >= 0)
                 {
-                    for (int i = 0; i < cols; i++)
+                    for (int i = 0; i < (tmp == cols - 1 ? cols : cols - 1 - tmp); i++)
                     {
                         End2Start();
                     }
@@ -63,17 +89,14 @@ namespace ScrollR {
         /// </summary>
         public override void Start2End()
         {
-            if (_endIndex >= _itemDataList.Count - 1)
-            {
-                return;
-            }
+            if (_endIndex >= _itemDataList.Count - 1) return;
             _startIndex++;
             _endIndex++;
             ItemMark_HG mark = items.Pop();
             float x = 0;
             float y = 0;
-            int c = _endIndex%cols;
-            if (c ==0)//刚好是整数倍
+            int c = _endIndex % cols;
+            if (c == 0)//刚好是整数倍
             {
                 x = items.lastData()._rect.anchoredPosition.x + prefabWidth + padding.spacing;
                 y = -padding.top;
@@ -81,14 +104,12 @@ namespace ScrollR {
             }
             else
             {
-
                 x = items.lastData()._rect.anchoredPosition.x;
-                y = -(padding.top + padding.spacing*c + prefabHeight*c);
+                y = -(padding.top + padding.spacing * c + prefabHeight * c);
             }
             mark._rect.anchoredPosition3D = new Vector3(x, y, 0);
             mark.Data = _itemDataList[_endIndex];
             items.Add(mark);
-   
         }
 
         /// <summary>
@@ -103,17 +124,21 @@ namespace ScrollR {
 
             ItemMark_HG mask = items.PopLast();
             float x = 0, y = 0;
-            int c = _startIndex%cols;
-            if (c !=0)
+            int c = _startIndex % cols;
+            if (c != 0)
             {
                 x = items[0]._rect.anchoredPosition.x;
-                y = -(padding.top+(padding.spacing+prefabHeight)*(c-1));
+                y = -(padding.top + (padding.spacing + prefabHeight) * (c - 1));
             }
             else//如果需要换列
             {
-                _content.sizeDelta -= Vector2.right * (prefabWidth + padding.spacing);
                 x = items[0]._rect.anchoredPosition.x - prefabWidth - padding.spacing;
-                y = -(padding.top + (padding.spacing+prefabHeight)*(cols-1)  );
+                y = -(padding.top + (padding.spacing + prefabHeight) * (cols - 1));
+            }
+
+            if (_endIndex % cols == 0)
+            {
+                _content.sizeDelta -= Vector2.right * (prefabWidth + padding.spacing);
             }
             mask._rect.anchoredPosition3D = new Vector3(x, y, 0);
             mask.Data = _itemDataList[_startIndex - 1];
@@ -147,7 +172,5 @@ namespace ScrollR {
             item.transform.localScale = Vector3.one;
             items.Add(mask);
         }
-
-
     }
 }
